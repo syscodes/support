@@ -27,8 +27,8 @@
 			"Syscodes\\Support\\": ""
 		},
 		"files": [
-            "helpers.php"
-        ]
+			"helpers.php"
+		]
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true
