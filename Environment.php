@@ -26,6 +26,8 @@ use Syscodes\Dotenv\Repository\RepositoryCreator;
 use Syscodes\Dotenv\Repository\Adapters\PutenvAdapter;
 
 /**
+ * Gets the adapter environment and value of an environment variable.
+ * 
  * @author Alexander Campo <jalexcam@gmail.com>
  */
 class Environment
@@ -54,12 +56,7 @@ class Environment
      */
     public static function get($key, $default = null)
     {
-        $value = static::getRepositoryCreator()->get($key);dd($value);
-        
-        if ($value === false)
-        {
-            $value = $_ENV[$key] ?? $_SERVER[$key] ?? false;
-        }
+        $value = static::getRepositoryCreator()->get($key);
 
         if ($value === false)
         {
